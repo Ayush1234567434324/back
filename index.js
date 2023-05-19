@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 
 
 app.use(cors());
-const port = process.env.PORT||3000;
+const port = 3000;
 app.use(express.json());
 
 app.use("/api/usersongs", require("./route/usersongs"));
@@ -23,7 +23,9 @@ app.use("/api/userinfo", require("./route/userinfo"));
 app.use("/api/username", require("./route/username"));
 app.use("/api/admin", require("./route/admin"));
 
-
+app.get("/", (req, res) => {
+  res.send("Welcome to TuneHub Backend!");
+});
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
