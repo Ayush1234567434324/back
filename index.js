@@ -1,31 +1,31 @@
-const connectTomongo = require("./db");
+const connectToMongo = require("./db");
 const express = require("express");
-
 const cors = require("cors");
-connectTomongo();
+
+// Import route handlers
+const userSongsRoute = require("./route/usersongs");
+const userInfoRoute = require("./route/userinfo");
+const userNameRoute = require("./route/username");
+const adminRoute = require("./route/admin");
+
+connectToMongo();
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 app.use(express.json());
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3001");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
- 
-  next();
-});
-
-
 app.use(cors());
-const port = 3000;
-app.use(express.json());
 
-app.use("/api/usersongs", require("./route/usersongs"));
-app.use("/api/userinfo", require("./route/userinfo"));
-app.use("/api/username", require("./route/username"));
-app.use("/api/admin", require("./route/admin"));
+// Set up routes
+app.use("/api/usersongs", userSongsRoute);
+app.use("/api/userinfo", userInfoRoute);
+app.use("/api/username", userNameRoute);
+app.use("/api/admin", adminRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome to TuneHub Backend!");
 });
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
