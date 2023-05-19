@@ -7,23 +7,23 @@
     "routes": [
       {
         "src": "/api/usersongs",
-        "dest": "/index.js"
+        "dest": "/usersongs.js"
       },
       {
         "src": "/api/userinfo",
-        "dest": "/index.js"
+        "dest": "/userinfo.js"
       },
       {
         "src": "/api/username",
-        "dest": "/index.js"
+        "dest": "/username.js"
       },
       {
         "src": "/api/admin",
-        "dest": "/index.js"
+        "dest": "/admin.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/index.js"
       }
     ]
   
