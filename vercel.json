@@ -8,8 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      
+
+      "src": "/api/admin/pop/playlists",
+      "dest": "route/admin.js"
+ 
+
     }
   ]
 }
