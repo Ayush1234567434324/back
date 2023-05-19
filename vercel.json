@@ -2,11 +2,31 @@
   "version": 2,
   "name" : "tunehub-backend",
 
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
-    }
-  ]
+  
+  
+    "routes": [
+      {
+        "src": "/api/usersongs",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/userinfo",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/username",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/admin",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  
+  
   
 }
