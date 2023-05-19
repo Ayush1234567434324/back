@@ -10,7 +10,7 @@
     {
       
 
-      "src": "/api/admin/pop/playlists",
+      "src": "/pop/playlists",
       "dest": "route/admin.js"
  
 
