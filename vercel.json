@@ -1,37 +1,32 @@
 {
   "version": 2,
-  "name" : "tunehub-backend",
+  "name": "tunehub-backend",
   "builds": [
     {
       "src": "./index.js",
       "use": "@vercel/node"
     }
   ],
-  
-  
-    "routes": [
-      {
-        "src": "/api/usersongs",
-        "dest": "/usersongs.js"
-      },
-      {
-        "src": "/api/userinfo",
-        "dest": "/userinfo.js"
-      },
-      {
-        "src": "/api/username",
-        "dest": "/username.js"
-      },
-      {
-        "src": "/api/admin",
-        "dest": "/admin.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.js"
-      }
-    ]
-  
-  
-  
+  "routes": [
+    {
+      "src": "/api/usersongs",
+      "dest": "/route/usersongs.js"
+    },
+    {
+      "src": "/api/userinfo",
+      "dest": "/route/userinfo.js"
+    },
+    {
+      "src": "/api/username",
+      "dest": "/route/username.js"
+    },
+    {
+      "src": "/api/admin",
+      "dest": "/route/admin.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
 }
