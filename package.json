@@ -8,7 +8,8 @@
     "node":"18.x"
   },
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"Error : no test application\" && exit 1"
   },
   "author": "",
   "license": "ISC",
