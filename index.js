@@ -16,7 +16,9 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
-
+app.use(cors({
+  origin: "https://good-pear-gharial-wear.cyclic.app" // Replace with your frontend domain
+}));
 // Set up routes
 app.use("/api/usersongs", userSongsRoute);
 app.use("/api/userinfo", userInfoRoute);
