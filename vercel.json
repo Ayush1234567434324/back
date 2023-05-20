@@ -5,15 +5,6 @@
       "src": "index.js",
       "use": "@vercel/node"
     }
-  ],
-  "routes": [
-    {
-      
-
-      "src": "/pop/playlists",
-      "dest": "route/admin.js"
- 
-
-    }
   ]
+
 }
